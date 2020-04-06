@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @bug.name %>
+</p>
+
+
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag(@bug.picture.url, size: '300x300') if @bug.picture? %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @bug.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_bug_path(@bug) %> |
+<%= link_to 'Back', bugs_path %>

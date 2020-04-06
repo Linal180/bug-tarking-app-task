@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   
+  resources :bugs
   devise_for :users
   root 'welcome#index'
   get 'my_bugs', to: 'user#my_bugs'
